@@ -21,6 +21,16 @@ export default function index() {
   const token = localStorage.getItem("access_token");
 
   useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user.perfil !== 2) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     (async () => {
       const grupos = await api.get("/grupoatendimento/gruposPorIdade", { headers: { "Authorization": `Bearer ${token}` } });
       setGruposAtendimentoDisponiveis(grupos.data);

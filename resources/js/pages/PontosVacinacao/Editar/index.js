@@ -15,6 +15,15 @@ export default function index() {
   const { id } = useParams();
 
   useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user.perfil !== 1) {
+        history.push('/');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
 
     api.get('/pontosvacinacao/' + id, { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => {

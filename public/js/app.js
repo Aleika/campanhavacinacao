@@ -3032,6 +3032,16 @@ function index() {
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
   var token = localStorage.getItem("access_token");
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 2) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var grupos;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -3384,6 +3394,16 @@ function index() {
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
   var token = localStorage.getItem("access_token");
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 2) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var dados;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -3664,6 +3684,16 @@ function index() {
 
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
   var token = localStorage.getItem("access_token");
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 1) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
 
   function handleGrupoAtendimento(_x) {
     return _handleGrupoAtendimento.apply(this, arguments);
@@ -3843,6 +3873,15 @@ function index() {
 
   var token = localStorage.getItem("access_token");
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 1) {
+        history.push('/');
+      }
+    }
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     _services_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/grupoatendimento/' + id, {
       headers: {
         "Authorization": "Bearer ".concat(token)
@@ -4020,6 +4059,16 @@ function index() {
 
   var token = localStorage.getItem("access_token");
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 1) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var grupos;
@@ -4543,6 +4592,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _components_MenuCidadao__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/MenuCidadao */ "./resources/js/components/MenuCidadao.js");
 /* harmony import */ var _services_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../services/api */ "./resources/js/services/api.js");
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles.scss */ "./resources/js/pages/MeusDados/styles.scss");
@@ -4583,7 +4633,17 @@ function index() {
       nomeMenu = _useState4[0],
       setNomeMenu = _useState4[1];
 
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
   var token = localStorage.getItem("access_token");
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 2) {
+        history.push('/');
+      }
+    }
+  }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       var dados;
@@ -4746,6 +4806,16 @@ function index() {
 
   var token = localStorage.getItem("access_token");
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useHistory)();
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 1) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
 
   function handlePontoVacinacao(_x) {
     return _handlePontoVacinacao.apply(this, arguments);
@@ -4957,6 +5027,15 @@ function index() {
       id = _useParams.id;
 
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 1) {
+        history.push('/');
+      }
+    }
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
     _services_api__WEBPACK_IMPORTED_MODULE_2__["default"].get('/pontosvacinacao/' + id, {
       headers: {
         "Authorization": "Bearer ".concat(token)
@@ -5157,6 +5236,16 @@ function index() {
 
   var token = localStorage.getItem("access_token");
   var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useHistory)();
+  (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
+    if (localStorage.getItem("access_token") !== null) {
+      var user = JSON.parse(localStorage.getItem("user"));
+
+      if (user.perfil !== 1) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
 
   function handleSearch() {
     return _handleSearch.apply(this, arguments);

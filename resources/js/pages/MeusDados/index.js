@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Menu from '../../components/MenuCidadao';
 import api from '../../services/api';
 
@@ -8,8 +8,18 @@ import './styles.scss';
 export default function index() {
   const [dados, setDados] = useState('');
   const [nomeMenu, setNomeMenu] = useState('');
-
+  const history = useHistory();
   const token = localStorage.getItem("access_token");
+
+  useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user.perfil !== 2) {
+        history.push('/');
+      }
+    }
+  }, []);
+
   useEffect(() => {
     (async () => {
       const dados = await api.get("/auth/me", { headers: { "Authorization": `Bearer ${token}` } });

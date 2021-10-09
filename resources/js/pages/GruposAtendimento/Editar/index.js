@@ -15,6 +15,15 @@ export default function index() {
   const token = localStorage.getItem("access_token");
 
   useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user.perfil !== 1) {
+        history.push('/');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
 
     api.get('/grupoatendimento/' + id, { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => {

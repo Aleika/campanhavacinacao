@@ -11,6 +11,16 @@ export default function index() {
   const token = localStorage.getItem("access_token");
 
   useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user.perfil !== 2) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     (async () => {
       const dados = await api.get("/agendamento/comprovante", { headers: { "Authorization": `Bearer ${token}` } });
       console.log(dados.data);

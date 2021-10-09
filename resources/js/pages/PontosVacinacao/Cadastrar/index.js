@@ -12,6 +12,16 @@ export default function index() {
   const token = localStorage.getItem("access_token");
   const history = useHistory();
 
+  useEffect(() => {
+    if (localStorage.getItem("access_token") !== null) {
+      const user = JSON.parse(localStorage.getItem("user"));
+      if (user.perfil !== 1) {
+        alert("Sem permissão de acesso");
+        history.push('/');
+      }
+    }
+  }, []);
+
   async function handlePontoVacinacao(e) {
     e.preventDefault();
 
