@@ -40,7 +40,7 @@ export default function index() {
 
       window.location.reload();
     } catch (err) {
-      alert(error.response.data.message);
+      alert(err.response.data.message);
     }
   }
 

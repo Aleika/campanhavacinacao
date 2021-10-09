@@ -4130,7 +4130,7 @@ function index() {
             case 8:
               _context3.prev = 8;
               _context3.t0 = _context3["catch"](0);
-              alert(error.response.data.message);
+              alert(_context3.t0.response.data.message);
 
             case 11:
             case "end":
@@ -5241,7 +5241,7 @@ function index() {
             case 8:
               _context3.prev = 8;
               _context3.t0 = _context3["catch"](0);
-              alert(error.response.data.message);
+              alert(_context3.t0.response.data.message);
 
             case 11:
             case "end":
