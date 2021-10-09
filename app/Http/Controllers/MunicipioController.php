@@ -24,13 +24,13 @@ class MunicipioController extends ApiController
     public function index(Request $request)
     {
 
-        if($this->user->CO_PERFIL == 2){ 
-            $query = Municipio::where('CO_UF', 24)->take(10);
+        if($this->user->CO_PERFIL == 2 || $this->user->CO_PERFIL == 1){ 
+            $query = Municipio::where('CO_UF', 24)->get();
            
          }else{
             return $this->responseUnauthorized();
         } 
 
-        return MunicipioResource::collection($query->get());
+        return MunicipioResource::collection($query);
     }
 }
