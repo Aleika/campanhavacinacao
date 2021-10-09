@@ -21,15 +21,19 @@ use App\Http\Controllers\Auth\AuthController;
 |
 */
 
-Route::post('login', [AuthController::class, 'login']);
 Route::get('chart', [ChartController::class, 'dataToChart']);
 Route::get('chartPorCidade', [ChartController::class, 'dataToChartCidade']);
 
-Route::post('register',  [AuthController::class, 'register']);
+Route::group([
+    'prefix' => 'auth'
+], function ($router) {
+    Route::post('login', [AuthController::class, 'login']);
+    Route::post('register',  [AuthController::class, 'register']);
+    Route::middleware(['jwt.verify'])->get('me', [AuthController::class, 'me']);
+    Route::middleware(['jwt.verify'])->post('logout', [AuthController::class, 'logout']);
+});
 
 Route::group(['middleware' => ['jwt.verify']], function() {
-    Route::get('me', [AuthController::class, 'me']);
-    Route::post('logout', [AuthController::class, 'logout']);
     Route::get('grupoatendimento/gruposPorIdade', [GrupoAtendimentoController::class, 'gruposAtendimentoByIdade']);
     Route::resource('grupoatendimento', GrupoAtendimentoController::class);
     Route::resource('pontosvacinacao', PontoVacinacaoController::class);

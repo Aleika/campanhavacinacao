@@ -25,7 +25,7 @@ export default function Register() {
       confirmarSenha,
     };
 
-    api.post('/register', data)
+    api.post('/auth/register', data)
       .then(response => {
         alert(response.data.message);
         history.push('/');

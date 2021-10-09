@@ -42,7 +42,7 @@ export default function Login() {
   async function handleLogin(e) {
     e.preventDefault();
 
-    api.post('/login', { email, senha })
+    api.post('/auth/login', { email, senha })
       .then(response => {
 
         const user = response.data.user;

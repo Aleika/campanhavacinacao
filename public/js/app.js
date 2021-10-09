@@ -2587,7 +2587,7 @@ function Menu(_ref) {
     var data = {
       token: localStorage.getItem("access_token")
     };
-    _services_api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/logout", data, {
+    _services_api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/auth/logout", data, {
       headers: {
         "Authorization": "Bearer ".concat(token)
       }
@@ -2744,7 +2744,7 @@ function Menu(_ref) {
     var data = {
       token: localStorage.getItem("access_token")
     };
-    _services_api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/logout", data, {
+    _services_api__WEBPACK_IMPORTED_MODULE_1__["default"].post("/auth/logout", data, {
       headers: {
         "Authorization": "Bearer ".concat(token)
       }
@@ -4437,7 +4437,7 @@ function Login() {
           switch (_context.prev = _context.next) {
             case 0:
               e.preventDefault();
-              _services_api__WEBPACK_IMPORTED_MODULE_3__["default"].post('/login', {
+              _services_api__WEBPACK_IMPORTED_MODULE_3__["default"].post('/auth/login', {
                 email: email,
                 senha: senha
               }).then(function (response) {
@@ -4592,7 +4592,7 @@ function index() {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return _services_api__WEBPACK_IMPORTED_MODULE_3__["default"].get("/me", {
+              return _services_api__WEBPACK_IMPORTED_MODULE_3__["default"].get("/auth/me", {
                 headers: {
                   "Authorization": "Bearer ".concat(token)
                 }
@@ -5507,7 +5507,7 @@ function Register() {
                 dataNascimento: dataNascimento,
                 confirmarSenha: confirmarSenha
               };
-              _services_api__WEBPACK_IMPORTED_MODULE_3__["default"].post('/register', data).then(function (response) {
+              _services_api__WEBPACK_IMPORTED_MODULE_3__["default"].post('/auth/register', data).then(function (response) {
                 alert(response.data.message);
                 history.push('/');
               })["catch"](function (err) {

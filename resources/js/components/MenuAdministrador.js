@@ -30,7 +30,7 @@ export default function Menu({ nav = "" }) {
     const data = {
       token: localStorage.getItem("access_token")
     }
-    api.post(`/logout`, data, { headers: { "Authorization": `Bearer ${token}` } })
+    api.post(`/auth/logout`, data, { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => {
         alert(response.data.message);
         localStorage.clear();

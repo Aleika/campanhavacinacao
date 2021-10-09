@@ -12,7 +12,7 @@ export default function index() {
   const token = localStorage.getItem("access_token");
   useEffect(() => {
     (async () => {
-      const dados = await api.get("/me", { headers: { "Authorization": `Bearer ${token}` } });
+      const dados = await api.get("/auth/me", { headers: { "Authorization": `Bearer ${token}` } });
       setDados(dados.data.data);
     })();
 
