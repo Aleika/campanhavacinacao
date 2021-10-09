@@ -31,3 +31,13 @@ INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENH
 INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 33', 'cidadao33@gmail.com', '1987-06-20', '123456', 2, true);
 INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 34', 'cidadao34@gmail.com', '1987-06-20', '123456', 2, true);
 INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 35', 'cidadao35@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 36', 'cidadao36@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 37', 'cidadao37@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 38', 'cidadao38@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 39', 'cidadao39@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 40', 'cidadao40@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 41', 'cidadao41@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 42', 'cidadao42@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 43', 'cidadao43@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 44', 'cidadao44@gmail.com', '1987-06-20', '123456', 2, true);
+INSERT INTO public."TB_USUARIO"("NO_NOME", "NO_EMAIL", "DT_NASCIMENTO", "NO_SENHA", "CO_PERFIL", "CO_STATUS") VALUES ('Cidadão 45', 'cidadao45@gmail.com', '1987-06-20', '123456', 2, true);
