@@ -17,6 +17,7 @@ class CreateAgendamentosTable extends Migration
             $table->bigIncrements('CO_SEQ_AGENDAMENTO');
             $table->unsignedBigInteger('CO_USUARIO');
             $table->date('DT_AGENDADO');
+            $table->unsignedBigInteger('NO_IDADE');
             $table->unsignedBigInteger('CO_HORARIO');
             $table->unsignedBigInteger('CO_PONTO_VACINACAO');
             $table->unsignedBigInteger('CO_GRUPO_ATENDIMENTO');

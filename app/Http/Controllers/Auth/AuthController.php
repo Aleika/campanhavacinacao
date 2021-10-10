@@ -47,10 +47,12 @@ class AuthController extends Controller
 
     public function register(Request $request){
 
+        $todayDate = date('m/d/Y');
+
         $validator = Validator::make($request->all(), [
             'nome' => 'required|string|max:255',
             'email' => 'required|email|unique:TB_USUARIO,NO_EMAIL',
-            'dataNascimento' => 'required|date',
+            'dataNascimento' => 'required|date|before_or_equal:'.$todayDate,
             'senha' => 'required|min:8',
             'confirmarSenha' => 'required|min:8'
         ]);
@@ -93,27 +95,27 @@ class AuthController extends Controller
         $errors = [];
 
         if($senha !== $confirmacaoSenha){
-            array_push($errors, "As senhas informadas são diferentes!");
+            array_push($errors, "As senhas informadas são diferentes.");
         }
 
         if (strlen($senha) < 8) {
-            array_push($errors, "Senha muito pequena!");
+            array_push($errors, "Senha muito pequena.");
         }
     
         if (!preg_match("#[0-9]+#", $senha)) {
-            array_push($errors, "Senha deve possuir pelo menos um número!");
+            array_push($errors, "Senha deve possuir pelo menos um número.");
         }
     
         if (!preg_match("@[A-Z]@", $senha)) {
-            array_push($errors, "Senha deve incluir pelo menos uma letra maiúscula!");
+            array_push($errors, "Senha deve incluir pelo menos uma letra maiúscula.");
         }
 
         if (!preg_match("@[a-z]@", $senha)) {
-            array_push($errors, "Senha deve incluir pelo menos uma letra minúscula!");
+            array_push($errors, "Senha deve incluir pelo menos uma letra minúscula.");
         }
         
         if (!preg_match("@[^\w]@", $senha)) {
-            array_push($errors, "Senha deve incluir pelo menos um caracter especial!");
+            array_push($errors, "Senha deve incluir pelo menos um caracter especial.");
         }  
         return $errors;
     }

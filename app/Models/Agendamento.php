@@ -9,7 +9,7 @@ class Agendamento extends Model
     protected $table = 'TB_AGENDAMENTO';
     protected $primaryKey = 'CO_SEQ_AGENDAMENTO';
 
-    protected $fillable = ['CO_USUARIO','DT_AGENDADO', 'CO_HORARIO', 'CO_PONTO_VACINACAO', 'CO_GRUPO_ATENDIMENTO', 'CO_STATUS_AGENDAMENTO'];
+    protected $fillable = ['CO_USUARIO','DT_AGENDADO', 'CO_HORARIO', 'NO_IDADE', 'CO_PONTO_VACINACAO', 'CO_GRUPO_ATENDIMENTO', 'CO_STATUS_AGENDAMENTO'];
 
     const CREATED_AT = 'DT_CREATED_AT';
     const UPDATED_AT = 'DT_UPDATED_AT';

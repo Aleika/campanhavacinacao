@@ -74,9 +74,15 @@ class AgendamentoController extends ApiController
             if(sizeof($agendamento) === 0){
                 DB::beginTransaction();
                 try{
+                    $anoAtual = date('Y');
+                    $anoNascimento = date('Y', strtotime($this->user->DT_NASCIMENTO));
+
+                    $idade = $anoAtual - $anoNascimento;
+
                     $agendamento = new Agendamento([
                         'CO_USUARIO' => $this->user->CO_SEQ_USUARIO,
                         'DT_AGENDADO' => $request->dataAgendado,
+                        'NO_IDADE' => $idade,
                         'CO_HORARIO' => $request->horario,
                         'CO_PONTO_VACINACAO' => $request->pontoVacinacao,
                         'CO_GRUPO_ATENDIMENTO' => $request->grupoAtendimento,
