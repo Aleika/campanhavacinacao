@@ -10,7 +10,7 @@ O sistem foi criado utilizando uma API Rest implementada em PHP utilizando o Lar
 - React.JS 17.0.2
 
 ## Diagrama de Entidade Relacionamento
-<img src="https://github.com/Aleika/campanhavacinacao/blob/main/database/modelagem%20do%20banco.png">
+<img src="https://github.com/Aleika/campanhavacinacao/blob/main/public/images/modelagem%20do%20banco.png">
 
 ## Clonando repositório do Git
 Para clonar o projeto é possível utilizar dois métodos:
