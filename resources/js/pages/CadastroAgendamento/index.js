@@ -52,7 +52,6 @@ export default function index() {
   }, [municipio]);
 
   useEffect(() => {
-    console.log(dataAgendado, pontoVacinacao);
     (async () => {
       const horario = await api.get(`/horario?pontoVacinacao=` + pontoVacinacao + `&dataAgendado='` + dataAgendado + `'`, { headers: { "Authorization": `Bearer ${token}` } });
       setHorariosDisponiveis(horario.data.data);
@@ -102,7 +101,7 @@ export default function index() {
                   <FormGroup>
                     <Label> Grupo de atendimento *</Label>
                     <Input required type='select' value={grupoAtendimento} onChange={e => setGrupoAtendimento(e.target.value)}>
-                      <option value="0">Selecione um grupo</option>
+                      <option value="">Selecione um grupo</option>
                       {gruposAtendimentoDisponiveis.map(({ id, nome, idade }) => {
                         return (
                           <option value={id} key={id}>
@@ -115,7 +114,7 @@ export default function index() {
                   <FormGroup>
                     <Label> Municipio *</Label>
                     <Input required type="select" value={municipio} onChange={e => setMunicipio(e.target.value)}>
-                      <option value="0">Selecione um muncípio</option>
+                      <option value="">Selecione um muncípio</option>
                       {municipios.map(({ id, nome }) => {
                         return (
                           <option value={id} key={id}>
@@ -128,7 +127,7 @@ export default function index() {
                   <FormGroup>
                     <Label> Pontos de Vacinação * </Label>
                     <Input required type="select" value={pontoVacinacao} onChange={e => setPontoVacinacao(e.target.value)}>
-                      <option value="0">Selecione um ponto de vacinacao</option>
+                      <option value="">Selecione um ponto de vacinacao</option>
                       {pontosVacinacao.map(({ id, nome }) => {
                         return (
                           <option value={id} key={id}>
@@ -151,7 +150,7 @@ export default function index() {
                   <FormGroup>
                     <Label> Hora do agendamento * </Label>
                     <Input required type="select" value={horario} onChange={e => setHorario(e.target.value)}>
-                      <option value="0">Selecione um horário</option>
+                      <option value="">Selecione um horário</option>
                       {horariosDisponiveis.map(({ id, descricao }) => {
                         return (
                           <option value={id} key={id}>

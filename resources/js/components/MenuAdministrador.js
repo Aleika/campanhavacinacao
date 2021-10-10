@@ -37,7 +37,6 @@ export default function Menu({ nav = "" }) {
         history.push('/');
       })
       .catch(error => {
-        console.log(error);
         alert(error);
       });
   }

@@ -2596,7 +2596,6 @@ function Menu(_ref) {
       localStorage.clear();
       history.push('/');
     })["catch"](function (error) {
-      console.log(error);
       alert(error);
     });
   }
@@ -3119,8 +3118,6 @@ function index() {
     }))();
   }, [municipio]);
   (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(function () {
-    console.log(dataAgendado, pontoVacinacao);
-
     _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
       var horario;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
@@ -3226,7 +3223,7 @@ function index() {
                       return setGrupoAtendimento(e.target.value);
                     },
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-                      value: "0",
+                      value: "",
                       children: "Selecione um grupo"
                     }), gruposAtendimentoDisponiveis.map(function (_ref5) {
                       var id = _ref5.id,
@@ -3249,7 +3246,7 @@ function index() {
                       return setMunicipio(e.target.value);
                     },
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-                      value: "0",
+                      value: "",
                       children: "Selecione um munc\xEDpio"
                     }), municipios.map(function (_ref6) {
                       var id = _ref6.id,
@@ -3271,7 +3268,7 @@ function index() {
                       return setPontoVacinacao(e.target.value);
                     },
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-                      value: "0",
+                      value: "",
                       children: "Selecione um ponto de vacinacao"
                     }), pontosVacinacao.map(function (_ref7) {
                       var id = _ref7.id,
@@ -3305,7 +3302,7 @@ function index() {
                       return setHorario(e.target.value);
                     },
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("option", {
-                      value: "0",
+                      value: "",
                       children: "Selecione um hor\xE1rio"
                     }), horariosDisponiveis.map(function (_ref8) {
                       var id = _ref8.id,
@@ -3419,11 +3416,10 @@ function index() {
 
             case 2:
               dados = _context.sent;
-              console.log(dados.data);
               setLocal(dados.data.local);
               setDados(dados.data);
 
-            case 6:
+            case 5:
             case "end":
               return _context.stop();
           }
@@ -3450,7 +3446,6 @@ function index() {
                 alert("Agendamento cancelado!");
                 history.push('/agendamento');
               })["catch"](function (error) {
-                console.log(error);
                 alert(error.response);
               });
 
@@ -3716,11 +3711,9 @@ function index() {
                   "Authorization": "Bearer ".concat(token)
                 }
               }).then(function (response) {
-                console.log(response);
                 alert(response.data.message);
                 history.push('/grupos/listar');
               })["catch"](function (error) {
-                console.log(error.response.data);
                 alert(error.response.data);
               });
 
@@ -3916,11 +3909,9 @@ function index() {
                   "Authorization": "Bearer ".concat(token)
                 }
               }).then(function (response) {
-                console.log(response);
                 alert(response.data.message);
                 history.push('/grupos/listar');
               })["catch"](function (error) {
-                console.log(error.response.data);
                 alert(error.response.data);
               });
 
@@ -4460,8 +4451,6 @@ function Login() {
               "Authorization": "Bearer ".concat(token)
             }
           }).then(function (response) {
-            console.log(response);
-
             if (response.data.possuiAgendamento) {
               history.push('/comprovante');
             } else {
@@ -4506,8 +4495,6 @@ function Login() {
                           "Authorization": "Bearer ".concat(token)
                         }
                       }).then(function (response) {
-                        console.log(response);
-
                         if (response.data.possuiAgendamento) {
                           history.push('/comprovante');
                         } else {
@@ -4675,8 +4662,6 @@ function index() {
         "Authorization": "Bearer ".concat(token)
       }
     }).then(function (response) {
-      console.log(response);
-
       if (response.data.possuiAgendamento) {
         setNomeMenu("Comprovante");
       } else {
@@ -4840,11 +4825,9 @@ function index() {
                   "Authorization": "Bearer ".concat(token)
                 }
               }).then(function (response) {
-                console.log(response);
                 alert(response.data.message);
                 history.push('/pontos/listar');
               })["catch"](function (error) {
-                console.log(error.response.data);
                 alert(error.response.data);
               });
 
@@ -5074,11 +5057,9 @@ function index() {
                   "Authorization": "Bearer ".concat(token)
                 }
               }).then(function (response) {
-                console.log(response);
                 alert(response.data.message);
                 history.push('/pontos/listar');
               })["catch"](function (error) {
-                console.log(error.response.data);
                 alert(error.response.data);
               });
 

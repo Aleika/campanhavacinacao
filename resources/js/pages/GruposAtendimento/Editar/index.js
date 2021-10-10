@@ -49,13 +49,11 @@ export default function index() {
 
     api.put('/grupoatendimento/' + id, data, { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => {
-        console.log(response)
         alert(response.data.message);
 
         history.push('/grupos/listar');
       })
       .catch(error => {
-        console.log(error.response.data);
         alert(error.response.data);
       })
   }

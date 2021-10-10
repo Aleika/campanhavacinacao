@@ -28,7 +28,6 @@ export default function index() {
 
     api.get('/agendamento/check', { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => {
-        console.log(response)
         if (response.data.possuiAgendamento) {
           setNomeMenu("Comprovante");
         } else {

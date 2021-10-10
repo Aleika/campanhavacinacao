@@ -34,13 +34,11 @@ export default function index() {
 
     api.post('/pontosvacinacao', data, { headers: { "Authorization": `Bearer ${token}` } })
       .then(response => {
-        console.log(response)
         alert(response.data.message);
 
         history.push('/pontos/listar');
       })
       .catch(error => {
-        console.log(error.response.data);
         alert(error.response.data);
       })
   }

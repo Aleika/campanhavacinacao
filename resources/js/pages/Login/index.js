@@ -24,7 +24,6 @@ export default function Login() {
         if (user.perfil = 2) {
           api.get('/agendamento/check', { headers: { "Authorization": `Bearer ${token}` } })
             .then(response => {
-              console.log(response)
               if (response.data.possuiAgendamento) {
                 history.push('/comprovante');
               } else {
@@ -60,7 +59,6 @@ export default function Login() {
             if (user.perfil == 2) {
               api.get('/agendamento/check', { headers: { "Authorization": `Bearer ${token}` } })
                 .then(response => {
-                  console.log(response)
                   if (response.data.possuiAgendamento) {
                     history.push('/comprovante');
                   } else {

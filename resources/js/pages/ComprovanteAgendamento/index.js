@@ -23,7 +23,6 @@ export default function index() {
   useEffect(() => {
     (async () => {
       const dados = await api.get("/agendamento/comprovante", { headers: { "Authorization": `Bearer ${token}` } });
-      console.log(dados.data);
       setLocal(dados.data.local);
       setDados(dados.data);
     })();
@@ -38,7 +37,6 @@ export default function index() {
         history.push('/agendamento');
       })
       .catch(error => {
-        console.log(error);
         alert(error.response);
       })
 
